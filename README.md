@@ -56,7 +56,7 @@ Empresas de **Carga** (ex: Atlas Air) tendem a ter médias de atraso maiores que
 
 ### Pré-requisitos
 * Conta Databricks Community (gratuita) - [Criar conta](https://community.cloud.databricks.com/)
-* Dados ANAC (Voo Regular Ativo) - [Download aqui](https://www.gov.br/anac/pt-br/assuntos/dados-e-estatisticas/dados-estatisticos/arquivos/vra/vra_2025_01.csv)
+* Dados ANAC (Voo Regular Ativo) - [Download aqui](https://siros.anac.gov.br/siros/registros/diversos/vra/2025/)
 
 ### Passo a Passo
 1. **Clone o repositório**
@@ -119,7 +119,7 @@ Cargo airlines tend to have higher average delays compared to commercial passeng
 
 ### Prerequisites
 * Databricks Community Account (Free) - [Create account](https://community.cloud.databricks.com/)
-* ANAC Data (Regular Active Flight) - [Download here](https://www.gov.br/anac/pt-br/assuntos/dados-e-estatisticas/dados-estatisticos/arquivos/vra/vra_2025_01.csv)
+* ANAC Data (Regular Active Flight) - [Download here](https://siros.anac.gov.br/siros/registros/diversos/vra/2025/)
 
 ### Step-by-Step
 1. **Clone the repository**
