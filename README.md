@@ -1,4 +1,4 @@
-# ✈️ Pipeline de Engenharia de Dados: Aeroporto de Guarulhos (GRU) // English version bellow
+# ✈️ Pipeline de Engenharia de Dados: Aeroporto de Guarulhos (GRU) // English version below
 
 ## 📌 Sobre o Projeto
 Este projeto desenvolve um pipeline de dados completo (ETL) para analisar as operações de voo do **Aeroporto Internacional de Guarulhos (GRU)**. Utilizando dados públicos da **ANAC**, foi construída uma arquitetura **Medallion (Bronze, Silver, Gold)** no Databricks para transformar dados brutos em inteligência de negócios.
@@ -39,6 +39,17 @@ O projeto segue a arquitetura *Multi-hop* (Medallion), dividido nos seguintes no
 * Identificação visual dos picos de tráfego aéreo (Manhã e Noite) vs. Janelas de baixa (Madrugada).
 * A **LATAM** e a **GOL** representam a vasta maioria das operações em GRU.
 * Empresas de **Carga** tendem a ter médias de atraso maiores que as companhias comerciais de passageiros.
+### Fluxo de Horários (Picos)
+![Gráfico de Horários](./Flights_daily-24h.png)
+
+### Ranking de Cancelamentos
+![Gráfico de Pizza](./top_delay_airlines.png)
+
+### Fluxo de Horários (Picos)
+![Gráfico de Horários](./top_cancelledflights_airline.png)
+
+### Fluxo de Horários (Picos)
+![Gráfico de Horários](./avg_delay.png)
 
 ---
 *Projeto desenvolvido para fins de estudo e portfólio de Engenharia de Dados.*
@@ -85,6 +96,19 @@ The project follows a *Multi-hop* (Medallion) architecture, divided into the fol
 * Visual identification of traffic peaks (Morning/Evening) vs. maintenance windows (Early morning).
 * **LATAM** and **GOL** account for the vast majority of operations at GRU.
 * **Cargo** airlines tend to have higher average delays compared to commercial passenger airlines.
+
+## Peak Hour Traffic
+![Hourly Traffic Chart](./Flights_daily-24h.png)
+
+## Cancellation Ranking
+![Cancellation Pie Chart](./top_delay_airlines.png)
+
+## Cancelled Flights by Airline
+![Cancelled Flights Chart](./top_cancelledflights_airline.png)
+
+## Average Delay
+![Average Delay Chart](./avg_delay.png)
+
 
 ---
 *Project developed for Data Engineering portfolio purposes.*
