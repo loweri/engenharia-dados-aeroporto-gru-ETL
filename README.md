@@ -5,7 +5,7 @@
 ![Spark](https://img.shields.io/badge/Spark-PySpark-orange?logo=apachespark)
 ![Databricks](https://img.shields.io/badge/Databricks-Community-red?logo=databricks)
 ![License](https://img.shields.io/badge/License-MIT-green)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)]([(https://www.linkedin.com/in/ericlesoliveira/)])
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)]((https://www.linkedin.com/in/ericlesoliveira/))
 
 > 📊 Pipeline ETL automatizado processando dados reais da ANAC com arquitetura Medallion (Bronze, Silver, Gold).
 
