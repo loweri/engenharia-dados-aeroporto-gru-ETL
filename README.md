@@ -5,6 +5,7 @@
 ![Spark](https://img.shields.io/badge/Spark-PySpark-orange?logo=apachespark)
 ![Databricks](https://img.shields.io/badge/Databricks-Community-red?logo=databricks)
 ![License](https://img.shields.io/badge/License-MIT-green)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)]([(https://www.linkedin.com/in/ericlesoliveira/)])
 
 > 📊 Pipeline ETL automatizado processando dados reais da ANAC com arquitetura Medallion (Bronze, Silver, Gold).
 
@@ -51,6 +52,31 @@ Volume absoluto de voos cancelados por companhia aérea.
 Empresas de **Carga** (ex: Atlas Air) tendem a ter médias de atraso maiores que as companhias comerciais de passageiros.
 ![Atrasos](./images/avg_delay.png)
 
+## 🚀 Como Executar Este Projeto
+
+### Pré-requisitos
+* Conta Databricks Community (gratuita) - [Criar conta](https://community.cloud.databricks.com/)
+* Dados ANAC (Voo Regular Ativo) - [Download aqui](https://www.gov.br/anac/pt-br/assuntos/dados-e-estatisticas/dados-estatisticos/arquivos/vra/vra_2025_01.csv)
+
+### Passo a Passo
+1. **Clone o repositório**
+   ```bash
+   git clone [https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git](https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git)
+
+2. Importe para o Databricks
+Acesse seu workspace Databricks.
+Vá em "Workspace" → Clique com botão direito → "Import".
+Selecione os arquivos .ipynb deste repositório.
+
+3. Configure os dados
+Faça upload do arquivo .csv da ANAC para o DBFS (ou Volume) do Databricks.
+Importante: Atualize o caminho do arquivo (file_path) na primeira célula do notebook Extract.
+
+4. Execute na ordem
+📓 Extract (Gera a tabela Bronze)
+📓 Transform (Gera a tabela Silver)
+📓 Load (Gera as tabelas Gold e os Gráficos)
+
 ---
 
 <details>
@@ -89,7 +115,32 @@ Total volume of cancelled flights by airline.
 Cargo airlines tend to have higher average delays compared to commercial passenger airlines.
 ![Average Delay](./images/avg_delay.png)
 
+## 🚀 How to Run This Project
+
+### Prerequisites
+* Databricks Community Account (Free) - [Create account](https://community.cloud.databricks.com/)
+* ANAC Data (Regular Active Flight) - [Download here](https://www.gov.br/anac/pt-br/assuntos/dados-e-estatisticas/dados-estatisticos/arquivos/vra/vra_2025_01.csv)
+
+### Step-by-Step
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git](https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git)
+
+2.Import to Databricks
+Access your Databricks workspace.
+Go to "Workspace" → Right-click → "Import".
+Select the .ipynb files from this repository.
+
+3.Data Setup
+Upload the ANAC .csv file to Databricks DBFS (or Volume).
+Important: Update the file path (file_path) in the first cell of the Extract notebook.
+
+4.Run in Order
+📓 Extract (Generates Bronze table)
+📓 Transform (Generates Silver table)
+📓 Load (Generates Gold tables and Charts)
+
 </details>
 
 ---
-*Project developed for Data Engineering portfolio purposes.*
+*Project developed by Ericles Oliveira for Data Engineering portfolio purposes.*
