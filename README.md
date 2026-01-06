@@ -39,7 +39,7 @@ O projeto segue a arquitetura *Multi-hop* (Medallion), dividido nos seguintes no
 * Identificação visual dos picos de tráfego aéreo (Manhã e Noite) vs. Janelas de baixa (Madrugada).
 * A **LATAM** e a **GOL** representam a vasta maioria das operações em GRU.
 * Empresas de **Carga** tendem a ter médias de atraso maiores que as companhias comerciais de passageiros.
-### Fluxo de Horários (Picos)
+
 ### Fluxo de Horários (Picos)
 ![Gráfico de Horários](./Flights_daily-24h.png)
 
