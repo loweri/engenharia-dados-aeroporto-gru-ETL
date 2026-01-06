@@ -40,15 +40,16 @@ O projeto segue a arquitetura *Multi-hop* (Medallion), dividido nos seguintes no
 * A **LATAM** e a **GOL** representam a vasta maioria das operações em GRU.
 * Empresas de **Carga** tendem a ter médias de atraso maiores que as companhias comerciais de passageiros.
 ### Fluxo de Horários (Picos)
+### Fluxo de Horários (Picos)
 ![Gráfico de Horários](./Flights_daily-24h.png)
 
 ### Ranking de Cancelamentos
 ![Gráfico de Pizza](./top_delay_airlines.png)
 
-### Fluxo de Horários (Picos)
+### Companhias Aéreas que Mais Cancelam
 ![Gráfico de Horários](./top_cancelledflights_airline.png)
 
-### Fluxo de Horários (Picos)
+### Média de Atrasos
 ![Gráfico de Horários](./avg_delay.png)
 
 ---
