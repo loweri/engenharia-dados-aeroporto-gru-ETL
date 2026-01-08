@@ -18,13 +18,15 @@ O objetivo principal é demonstrar competências em **Engenharia de Dados**, **Q
 
 ## 📂 Estrutura do Projeto & Arquitetura
 
-O projeto segue a arquitetura *Multi-hop* (Medallion). Abaixo, os links para o código e a visualização rápida (HTML):
+O projeto segue a arquitetura *Multi-hop* (Medallion). Abaixo, os links para visualização rápida (HTML):
 
 | Etapa | Notebook | Descrição | Visualização |
 |:---:|---|---|:---:|
-| 🥉 | `Extract` | **Ingestão (Raw -> Bronze)**<br>Leitura de CSV e padronização Snake Case. | [📄 Ver HTML](./Extract~etl_gru_airport_(bronze-layer)-HTML.html) |
-| 🥈 | `Transform` | **Limpeza (Bronze -> Silver)**<br>Filtro de escopo (GRU), Tipagem de Datas e tratamento de nulos. | [📄 Ver HTML](./Transform~etl_gru_(silver-layer)-HTML.html) |
-| 🥇 | `Load` | **Agregação (Silver -> Gold)**<br>Cálculo de KPIs: Picos, Market Share, Atrasos e Cancelamentos. | [📄 Ver HTML](./Load~etl_gru_(gold-layer)-HTML.html) |
+| 🥉 | `Extract` | **Ingestão (Raw -> Bronze)**<br>Leitura de CSV e padronização Snake Case. | [📄 Ver Relatório](./docs/Extract~etl_gru_airport_(bronze-layer)-HTML.html) |
+| 🥈 | `Transform` | **Limpeza (Bronze -> Silver)**<br>Filtro de escopo (GRU), Tipagem de Datas e tratamento de nulos. | [📄 Ver Relatório](./docs/Transform~etl_gru_(silver-layer)-HTML.html) |
+| 🥇 | `Load` | **Agregação (Silver -> Gold)**<br>Cálculo de KPIs: Picos, Market Share, Atrasos e Cancelamentos. | [📄 Ver Relatório](./docs/Load~etl_gru_(gold-layer)-HTML.html) |
+
+> **Nota:** Os arquivos de código fonte `.ipynb` estão na pasta `notebooks/`.
 
 ## 🛠️ Stack Tecnológico
 * **Plataforma:** Databricks (Community Edition)
@@ -55,28 +57,28 @@ Empresas de **Carga** (ex: Atlas Air) tendem a ter médias de atraso maiores que
 ## 🚀 Como Executar Este Projeto
 
 ### Pré-requisitos
-* Conta Databricks Community (gratuita) - [Criar conta](https://community.cloud.databricks.com/)
-* Dados ANAC (Voo Regular Ativo) - [Download aqui](https://siros.anac.gov.br/siros/registros/diversos/vra/2025/)
+* **Conta Databricks Community** (gratuita) - [Criar conta](https://community.cloud.databricks.com/)
+* **Dados ANAC** (Voo Regular Ativo) - [Download aqui](https://siros.anac.gov.br/siros/registros/diversos/vra/2025/)
 
-### Passo a Passo
-1. **Clone o repositório**
-   ```bash
-   git clone [https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git](https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git)
+### Instalação e Execução
 
-2. Importe para o Databricks
-Acesse seu workspace Databricks.
-Vá em "Workspace" → Clique com botão direito → "Import".
-Selecione os arquivos .ipynb deste repositório.
+**1. Clone o repositório**
+```bash
+git clone https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git
+```
+**2. Importe para o Databricks**
+* Acesse seu workspace Databricks.
+* Vá em **Workspace** > Clique com botão direito > **Import**.
+* Navegue até a pasta `notebooks` deste repositório e importe os arquivos `.ipynb`.
 
-3. Configure os dados
-Faça upload do arquivo .csv da ANAC para o DBFS (ou Volume) do Databricks.
-Importante: Atualize o caminho do arquivo (file_path) na primeira célula do notebook Extract.
+**3. Configure os dados**
+* Faça upload do arquivo `.csv` da ANAC para a aba **Catalog > Volumes** (ou via *Upload Data* no DBFS).
+* **Importante:** Copie o caminho do arquivo (*Copy Path*) e atualize a variável `file_loc` na primeira célula do notebook `[1]_extract`.
 
-4. Execute na ordem
-📓 Extract (Gera a tabela Bronze)
-📓 Transform (Gera a tabela Silver)
-📓 Load (Gera as tabelas Gold e os Gráficos)
-
+**4. Execute na ordem**
+* 1️⃣ `[1]_extract` (Ingere os dados brutos e salva a tabela Bronze)
+* 2️⃣ `[2]_transform` (Limpa, padroniza e gera a tabela Silver)
+* 3️⃣ `[3]_load` (Cria as agregações finais e gera os gráficos da Gold)
 ---
 
 <details>
@@ -93,9 +95,11 @@ The main goal is to demonstrate proficiency in **Data Engineering**, **Data Qual
 
 | Stage | Notebook | Description | Quick View |
 |:---:|---|---|:---:|
-| 🥉 | `Extract` | **Ingestion Phase**<br>Raw data ingestion and schema normalization. | [📄 View HTML](./Extract~etl_gru_airport_(bronze-layer)-HTML.html) |
-| 🥈 | `Transform` | **Cleaning Phase**<br>Scope filtering (GRU only), Date typing, and null handling. | [📄 View HTML](./Transform~etl_gru_(silver-layer)-HTML.html) |
-| 🥇 | `Load` | **Aggregation Phase**<br>Creating analytical tables and KPIs using SQL/PySpark. | [📄 View HTML](./Load~etl_gru_(gold-layer)-HTML.html) |
+| 🥉 | `Extract` | **Ingestion Phase**<br>Raw data ingestion and schema normalization. | [📄 View Report](./docs/Extract~etl_gru_airport_(bronze-layer)-HTML.html) |
+| 🥈 | `Transform` | **Cleaning Phase**<br>Scope filtering (GRU only), Date typing, and null handling. | [📄 View Report](./docs/Transform~etl_gru_(silver-layer)-HTML.html) |
+| 🥇 | `Load` | **Aggregation Phase**<br>Creating analytical tables and KPIs using SQL/PySpark. | [📄 View Report](./docs/Load~etl_gru_(gold-layer)-HTML.html) |
+
+> **Note:** Source code files `.ipynb` are located in the `notebooks/` folder.
 
 ## 📊 Key Insights
 
@@ -118,29 +122,30 @@ Cargo airlines tend to have higher average delays compared to commercial passeng
 ## 🚀 How to Run This Project
 
 ### Prerequisites
-* Databricks Community Account (Free) - [Create account](https://community.cloud.databricks.com/)
-* ANAC Data (Regular Active Flight) - [Download here](https://siros.anac.gov.br/siros/registros/diversos/vra/2025/)
+* **Databricks Community Account** (Free) - [Create account](https://community.cloud.databricks.com/)
+* **ANAC Data** (Regular Active Flight) - [Download here](https://siros.anac.gov.br/siros/registros/diversos/vra/2025/)
 
-### Step-by-Step
-1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git](https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git)
+### Installation and Execution
 
-2.Import to Databricks
-Access your Databricks workspace.
-Go to "Workspace" → Right-click → "Import".
-Select the .ipynb files from this repository.
+**1. Clone the repository**
+```bash
+git clone https://github.com/loweri/engenharia-dados-aeroporto-gru-ETL.git
+```
 
-3.Data Setup
-Upload the ANAC .csv file to Databricks DBFS (or Volume).
-Important: Update the file path (file_path) in the first cell of the Extract notebook.
+**2. Import to Databricks**
+* Access your Databricks workspace.
+* Go to **Workspace** > Right-click > **Import**.
+* Navigate to the `notebooks` folder of this repository and import the `.ipynb` files.
 
-4.Run in Order
-📓 Extract (Generates Bronze table)
-📓 Transform (Generates Silver table)
-📓 Load (Generates Gold tables and Charts)
+**3. Data Setup**
+* Upload the ANAC `.csv` file to the **Catalog > Volumes** tab (or via *Upload Data* in DBFS).
+* **Important:** Copy the file path (*Copy Path*) and update the `file_loc` variable in the first cell of the notebook `[1]_extract`.
+
+**4. Run in order**
+* 1️⃣ `[1]_extract` (Ingests raw data and saves the Bronze table)
+* 2️⃣ `[2]_transform` (Cleans, standardizes, and generates the Silver table)
+* 3️⃣ `[3]_load` (Creates final aggregations and generates Gold layer charts)
 
 </details>
 
----
-*Project developed by Ericles Oliveira for Data Engineering portfolio purposes.*
+Project developed by Ericles Oliveira for Data Engineering portfolio purposes.
