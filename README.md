@@ -22,9 +22,9 @@ O projeto segue a arquitetura *Multi-hop* (Medallion). Abaixo, os links para vis
 
 | Etapa | Notebook | Descrição | Visualização |
 |:---:|---|---|:---:|
-| 🥉 | `Extract` | **Ingestão (Raw -> Bronze)**<br>Leitura de CSV e padronização Snake Case. | [📄 Ver Relatório](./docs/Extract~etl_gru_airport_(bronze-layer)-HTML.html) |
-| 🥈 | `Transform` | **Limpeza (Bronze -> Silver)**<br>Filtro de escopo (GRU), Tipagem de Datas e tratamento de nulos. | [📄 Ver Relatório](./docs/Transform~etl_gru_(silver-layer)-HTML.html) |
-| 🥇 | `Load` | **Agregação (Silver -> Gold)**<br>Cálculo de KPIs: Picos, Market Share, Atrasos e Cancelamentos. | [📄 Ver Relatório](./docs/Load~etl_gru_(gold-layer)-HTML.html) |
+| 🥉 | `Extract` | **Ingestão (Raw -> Bronze)**<br>Leitura de CSV e padronização Snake Case. | [📄 Ver Relatório](./docs/report_extract.html) |
+| 🥈 | `Transform` | **Limpeza (Bronze -> Silver)**<br>Filtro de escopo (GRU), Tipagem de Datas e tratamento de nulos. | [📄 Ver Relatório](./docs/report_transformL.html) |
+| 🥇 | `Load` | **Agregação (Silver -> Gold)**<br>Cálculo de KPIs: Picos, Market Share, Atrasos e Cancelamentos. | [📄 Ver Relatório](./docs/report_load.html) |
 
 > **Nota:** Os arquivos de código fonte `.ipynb` estão na pasta `notebooks/`.
 
@@ -95,9 +95,9 @@ The main goal is to demonstrate proficiency in **Data Engineering**, **Data Qual
 
 | Stage | Notebook | Description | Quick View |
 |:---:|---|---|:---:|
-| 🥉 | `Extract` | **Ingestion Phase**<br>Raw data ingestion and schema normalization. | [📄 View Report](./docs/Extract~etl_gru_airport_(bronze-layer)-HTML.html) |
-| 🥈 | `Transform` | **Cleaning Phase**<br>Scope filtering (GRU only), Date typing, and null handling. | [📄 View Report](./docs/Transform~etl_gru_(silver-layer)-HTML.html) |
-| 🥇 | `Load` | **Aggregation Phase**<br>Creating analytical tables and KPIs using SQL/PySpark. | [📄 View Report](./docs/Load~etl_gru_(gold-layer)-HTML.html) |
+| 🥉 | `Extract` | **Ingestion Phase**<br>Raw data ingestion and schema normalization. | [📄 View Report](./docs/report_extract.html) |
+| 🥈 | `Transform` | **Cleaning Phase**<br>Scope filtering (GRU only), Date typing, and null handling. | [📄 View Report](./docs/report_transformL.html) |
+| 🥇 | `Load` | **Aggregation Phase**<br>Creating analytical tables and KPIs using SQL/PySpark. | [📄 View Report](./docs/report_load.html) |
 
 > **Note:** Source code files `.ipynb` are located in the `notebooks/` folder.
 
